@@ -16,7 +16,7 @@ Git과 유사한 동작 방식을 가진 서버-USB 파일 동기화 도구입�
 
 ### 바이너리 다운로드
 
-[Releases](https://github.com/your-repo/sync-tool/releases) 페이지에서 플랫폼에 맞는 바이너리를 다운로드하세요.
+[Releases](https://github.com/orot11955/sync-tool)] 페이지에서 플랫폼에 맞는 바이너리를 다운로드하세요.
 
 ### 소스에서 빌드
 
@@ -69,9 +69,9 @@ make build
 ```yaml
 # 서버 설정
 server:
-  host: "10.10.30.237"
-  user: "root"
-  port: 22
+  host: "ip"
+  user: "id"
+  port: port
   key_path: ""  # SSH 키 경로
 
 # 동기화 기본 설정
@@ -94,25 +94,25 @@ sync:
 
 # 동기화 프로필들
 profiles:
-  aunes_ins:
-    name: "AUNES_INS"
-    description: "AUNES INS 폴더 동기화"
-    server_path: "/stor2/USB_SYNC/AUNES_INS"
-    local_path: "/Volumes/AUNES_INS"
+  subject_name1:
+    name: "name"
+    description: "description"
+    server_path: "server_path"
+    local_path: "local_path"
     
-  ventoy:
-    name: "Ventoy (KICKSTART, config)"
-    description: "Ventoy 폴더 동기화 (ISO 파일 제외)"
-    server_path: "/stor2/USB_SYNC/Ventoy"
-    local_path: "/Volumes/Ventoy"
+  subject_name2:
+    name: "name"
+    description: "description"
+    server_path: "server_path"
+    local_path: "local_path"
     excludes:
       - "_iso/*.iso"
       
-  iso_only:
-    name: "ISO Files Only"
-    description: "ISO 파일만 동기화"
-    server_path: "/stor2/USB_SYNC/Ventoy"
-    local_path: "/Volumes/Ventoy"
+  subject_name3:
+    name: "name"
+    description: "description"
+    server_path: "server_path"
+    local_path: "local_path"
     includes:
       - "*.iso"
     excludes: ["*"]
